@@ -25,5 +25,9 @@ class Triangle
     def invalid_length_message
       "All side lengths must be positive!"
     end 
+    
+    def invalid_triangle_message
+      "One of these side lengths is too long!"
+    end 
   end
 end
