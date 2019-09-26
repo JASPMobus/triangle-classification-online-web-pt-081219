@@ -12,6 +12,12 @@ class Triangle
       rescue TriangleError => error
         puts error.invalid_length_message
       end
+    elsif side1 >= side2+side3 || side2 >= side1+side3 || side3 = side1+side2
+      begin 
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.invalid_triangle_message
+      end
     elsif side1 == side2 && side2 == side3
       @kind = :equilateral
     elsif side1 == side2 || side1 == side3 || side2 == side3
