@@ -22,8 +22,8 @@ class Triangle
   end
   
   class TriangleError < StandardError
-    def zero_length_message
-      "All side lengths must be nonzero!"
+    def invalid_length_message
+      "All side lengths must be positive!"
     end 
   end
 end
