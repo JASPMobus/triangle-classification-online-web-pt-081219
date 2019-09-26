@@ -1,5 +1,5 @@
 class Triangle
-  attr_accessor :side1, :side2, :side3, :type
+  attr_accessor :side1, :side2, :side3, :kind
   
   def initialize(side1, side2, side3)
     @side1 = side1
@@ -7,11 +7,11 @@ class Triangle
     @side3 = side3
     
     if side1 == side2 && side2 == side3
-      @type = :equilateral
+      @kind = :equilateral
     elsif side1 == side2 || side1 == side3 || side2 == side3
-      @type = :isosceles 
+      @kind = :isosceles 
     else
-      @type = :scalene 
+      @kind = :scalene 
     end
   end
 end
