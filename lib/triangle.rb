@@ -6,32 +6,24 @@ class Triangle
     @side2 = side2
     @side3 = side3
     
-    self.valid?
-    
+    if side1 <= 0 || side2 <= 0 || side3 <= 0
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.invalid_length_message
+      end
+    elsif side1 >= (side2+side3) || side2 >= (side1+side3) || side3 = (side1+side2)
+      begin 
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.invalid_triangle_message
+      end
     elsif side1 == side2 && side2 == side3
       @kind = :equilateral
     elsif side1 == side2 || side1 == side3 || side2 == side3
       @kind = :isosceles 
     else
       @kind = :scalene 
-    end
-  end
-  
-  def valid?
-    if @side1 <= 0 || @side2 <= 0 || @side3 <= 0
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.invalid_length_message
-      end
-    elsif @side1 >= (@side2+@side3) || 
-          @side2 >= (@side1+@side3) || 
-          @side3 >= (@side1+@side2)
-      begin 
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.invalid_triangle_message
-      end
     end
   end
   
