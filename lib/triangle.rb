@@ -18,6 +18,8 @@ class Triangle
   end
   
   class TriangleError < StandardError
-    
+    def zero_length_message
+      ""
+    end 
   end
 end
