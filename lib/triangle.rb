@@ -30,6 +30,7 @@ class Triangle
         puts error.invalid_triangle_message
       end
     end
+  end
   
   class TriangleError < StandardError
     def invalid_length_message
