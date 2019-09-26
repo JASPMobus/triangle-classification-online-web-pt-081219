@@ -6,7 +6,9 @@ class Triangle
     @side2 = side2
     @side3 = side3
     
-    if side1 == side2 && side2 == side3
+    if side1 == 0 or side2 == 0 or side3 == 0
+      
+    elsif side1 == side2 && side2 == side3
       @kind = :equilateral
     elsif side1 == side2 || side1 == side3 || side2 == side3
       @kind = :isosceles 
