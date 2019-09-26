@@ -10,7 +10,7 @@ class Triangle
       begin
         raise TriangleError
       rescue TriangleError => error
-        puts error.zero_length_message
+        puts error.invalid_length_message
       end
     elsif side1 == side2 && side2 == side3
       @kind = :equilateral
